@@ -5,6 +5,6 @@ Pensez a faire le slider en CSS
 https://www.youtube.com/watch?v=ZsuTciVL8PU
 Ca peut être utile, ou voir un autre tuto ou une autre manière de faire
 
-Reverifier le positionnement avec flexbox grid
+Reverifier le positionnement avec flexbox et grid
 
-Refaire le site en entier version propre.
+Refaire le site en entier version propre et commenter chaque morceau de code
