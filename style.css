@@ -1,0 +1,807 @@
+/* -------------------- GENERAL ----------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.blue {
+    /* couleur Bleu */
+    color: #5CABD1;
+}
+
+.container {
+    padding: 0 15%;
+}
+
+/* -------------------- Responsive Tablettes ----------------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+/* -------------------- Responsive Smartphones ----------------- */
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 0 5px;
+    }
+}
+
+/* -------------------- Logo + Menu ----------------- */
+
+header {
+    width: 100%;
+    height: 100px;
+    background: white;
+    z-index: 50;
+}
+
+.navigation {
+    position: fixed;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    width: 100%;
+    background: white;
+    z-index: 50;
+
+}
+
+/* -------------------- Menu Normal ----------------- */
+
+nav {
+    max-width: 700px;
+    width: 95%;
+    background: white;
+}
+
+#checkbox,
+.toggle {
+    display: none;
+}
+
+.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    list-style-type: none;
+
+}
+
+.menu li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100px;
+    border-top: 5px solid white;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: border-top .2s linear;
+    -webkit-transition: border-top 0.5s linear;
+    transition: border-top 0.5s linear;
+}
+
+.menu li:hover {
+    border-top: 5px solid #5CABD1;
+
+}
+
+.menu li a {
+    text-decoration: none;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: grey;
+}
+
+/* -------------------- Responsive Tablettes ----------------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
+/* -------------------- Responsive Smartphones ----------------- */
+
+@media screen and (max-width: 767px) {
+
+    header {
+        width: 100%;
+        height: 50px;
+    }
+    
+    .navigation {
+        height: 50px;
+    }
+    
+    header img {
+        padding: 5px;
+        max-width: 200px;
+    }
+    
+    nav {
+        max-width: 120px;
+    }
+    
+    .toggle {
+        clear: both;
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        line-height: 40px;
+        cursor: pointer;
+        width: 100%;
+        height: 50px;
+        color: #5CABD1;
+        background: #e1e2e3;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        -webkit-transition: all .1s linear;
+        transition: all .1s linear;
+    }
+    
+    .toggle:hover {
+        background: #cecece;
+        position: relative;
+        z-index: 5;
+    }
+    
+    #checkbox:checked + label .resp li {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: all .7s linear;
+        transition: all .7s linear;
+        z-index: 10;
+    }
+
+    #checkbox:checked + label .resp {
+        height: 200px;
+    }
+    
+    .navigation {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    
+    .navigation img {
+        width: 60%;
+    }
+    
+    .menu {
+        border-radius: 0px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 0px;
+        -webkit-transition: height .3s linear;
+        transition: height .3s linear;
+    }
+    
+    .menu li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-item-align: center;
+        align-self: center;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        background: white;
+        height: 100%;
+    }
+    
+    .menu li a {
+        width: 95%;
+        font-size: 13px;
+        text-align: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+    }
+}
+
+/* -------------------- Section Accueil ----------------- */
+
+/* -------------------- Slider ----------------- */
+
+.slider img {
+    width: 100%;
+    z-index: -1;
+}
+
+.slider {
+    position: relative;
+}
+
+#chevron {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.chev {
+    height: 100px;
+    width: 50px;
+    color: white;
+    background-color: rgba(39, 39, 39, 0.6);
+    z-index: 2;
+}
+
+.chevronLeft {
+    border-radius: 0 50px 50px 0;
+}
+
+.chevronRight {
+    border-radius: 50px 0 0 50px;
+    right: 0;
+    text-align: right;
+}
+
+#chevron i {
+    line-height: 100px;
+    font-size: 36px;
+    z-index: 3;
+}
+
+#accueil .container {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: 10%;
+}
+
+#accueil .container h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+#accueil .container p {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.button {
+    background-color: #5CABD1;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #008CBA;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.button:hover {
+    color: #5CABD1;
+    background-color: white;
+    border: 2px solid #008CBA;
+}
+
+/* -------------------- Responsive Smartphones ----------------- */
+
+@media screen and (max-width: 767px) {
+    #accueil .container h1 {
+        font-size: 1em;
+    }
+    
+    .slider img {
+        height: 250px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    
+    #accueil .container p {
+        font-size: 0.9em;
+    }
+    
+    .button {
+        font-size: 0.8em;
+    }
+    
+    .chev {
+        display: none;
+    }
+}
+
+/* -------------------- Titres des Sections avec Séparateur ----------------- */
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3em;
+    padding-top: 1em;
+}
+
+.middle {
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.separateur {
+    display: block;
+    position: relative;
+}
+
+.rond-bleu {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #5CABD1;
+    border: solid 5px white;
+    margin: auto;
+    z-index: 1;
+}
+
+hr {
+    margin: auto;
+    width: 300px;
+    background: 2px grey;
+}
+
+/* -------------------- Responsive Smartphones ----------------- */
+
+@media screen and (max-width: 767px) {
+    h2 {
+        font-size: 1.5em;
+        margin-top: 20px;
+        font-weight: 900;
+    }
+    .middle {
+        width: 95%;
+        margin-top: 15px;
+    }
+
+}
+
+/* -------------------- Section Services ----------------- */
+
+.contenu {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.imac {
+    text-align: center;
+}
+
+
+.logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.service {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.cercle {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.droite {
+    display: block;
+    position: absolute;
+    right: -8px;
+    top: 27px;
+}
+
+.description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* -------------------- Responsive Tablettes ----------------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .contenu img {
+        min-width: 500px;
+    }
+    
+    .contenu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    
+    .blocTexte {
+        width: 90%;
+    }
+}
+
+/* -------------------- Responsive Smartphones ----------------- */
+
+@media screen and (max-width: 767px) {
+    .service .cercle {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .droite {
+        top: 15px;
+    }
+    
+    .contenu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    
+    .description p, .logo {
+        text-align: justify;
+        margin: 0 10px;
+    }
+    
+    h3 {
+        font-weight: bold;
+        margin-top: 15px;
+    }
+    
+    .fa-circle {
+        font-size: 13px;
+        right: -7px;
+    }
+}
+
+/* -------------------- Section Projets ----------------- */
+
+#portfolio {
+    background: rgba(229, 229, 229, 0.45);
+}
+
+.boutonGroupe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.boutonProjets {
+    padding: 8px 15px 8px 15px;
+    background-color: #E5E5E5;
+    color: #000;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.boutonActive {
+    background-color: #5CABD1;
+    border-bottom-color: #5CABD1;
+    color: #fff;
+}
+
+.boutonIndiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #468CAD;
+}
+
+/* -------------------- Flèche bas pour premier élément ----------------- */
+
+.arrow_box {
+    position: relative;
+    background: #5CABD1;
+}
+
+.arrow_box:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-color: rgba(92, 171, 209, 0);
+    border-top-color: #5CABD1;
+    border-width: 10px;
+    margin-left: -10px;
+}
+
+/* -------------------- Responsive smartphones ----------------- */
+
+@media screen and (max-width: 767px) {
+    .boutonGroupe {
+        font-size: 0.7em;
+    }
+}
+
+/* -------------------- Images du Projets ----------------- */
+
+.gallery {
+    width: 100%;
+    margin: auto;
+}
+
+.pictureRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.picture {
+    width: 25%;
+    min-width: 200px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.picture img {
+    width: 100%;
+    margin: 10px;
+}
+
+.legende {
+    text-align: left;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 10px;
+    opacity: 0;
+    bottom: -1%;
+    left: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin: 10px;
+    width: 100%;
+}
+
+.picture:hover .legende {
+    opacity: 1;
+    bottom: 4px;
+}
+
+.iconeOeil {
+    position: absolute;
+    background-color: #4DA1B1;
+    color: #fff;
+    left: 80%;
+    top: -25%;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+h5 {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* -------------------- Responsive Tablettes ----------------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    h5 {
+        font-size: 14px;
+    }
+    
+    .iconeOeil {
+        left: 75%;
+    }
+    
+    .picture {
+        width: 30%;
+    }
+}
+
+/* -------------------- Responsive Smartphones ----------------- */
+
+@media screen and (max-width: 767px) {
+    h5 {
+        font-size: 12px;
+    }
+    
+    .picture {
+        width: 95%;
+        margin: auto;
+    }
+    
+    .picture img {
+        width: 95%;
+        margin: auto;
+    }
+    
+    .legende {
+        margin: auto;
+        width: 95%;
+    }
+}
+
+/* -------------------- Section Contact ----------------- */
+
+.google-maps {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    display: block;
+    position: absolute;
+    width: 100% !important;
+    height: 600px !important;
+}
+
+.masqueBleu {
+    position: relative;
+    width: 100% !important;
+    height: 600px !important;
+    background-color: #3491B2;
+    opacity: 0.3;
+}
+
+#formulaire {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 320px;
+    height: 500px;
+    border-radius: 10px;
+    z-index: 50;
+    text-align: left;
+}
+
+#formulaire p {
+    text-align: left;
+    margin-top: 0;
+}
+
+#formulaire input[type="text"] {
+    padding: 5px 10px;
+    width: 95%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#formulaire textarea {
+    width: 95%;
+    height: 100px;
+    font-family: Roboto, sans-serif;
+    padding: 5px 10px;
+}
+
+
+.formInfo {
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: right;
+    font-size: 0.7em;
+}
+
+.texteContact {
+    margin: 0;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+/* -------------------- Responsive Smartphones ----------------- */
+
+@media screen and (max-width: 767px) {
+
+    #formulaire {
+        width: 90%;
+        padding: 10px;
+    }
+
+}

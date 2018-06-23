@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WebAgency</title>
+    <!-- SEO -->
+    <meta name="description" content="WebAgency, l'agence de tous vos projets !">
+    <meta name="keywords" content="WebAgency, sites web, agence web">
+    <!-- Viewport pour le responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font-Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+    <!--Feuille de style normalize-->
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+    <!--Feuille de style-->
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <!--On place le logo et le menu de navigation-->
+        <div class="navigation">
+            <img src="images/logo.png" alt="Logo WebAgency">
+            <!--On crée un menu responsive-->
+            <nav>
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">
+                    <ul class="menu resp">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <span class="toggle">&#x2630;</span> 
+                </label>
+            </nav>
+        </div>
+    </header>
+    <!--Section Accueil Slider (A faire en Js?)-->
+    <section id="accueil">
+        <div class="slider">
+            <img src="images/slider/bg1.jpg" alt="WebAgency Girly">
+            <div id="chevron">
+                <div class="chevronLeft chev"><i class="fas fa-chevron-left"></i></div>
+                <div class="chevronRight chev"><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="container">
+                <h1><span class="blue">webagency</span> : l'agence de tout <br />vos projets !</h1>
+                <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser</p><br>
+                <a href="#" class="button">Plus d'infos</a>
+            </div>
+        </div>
+    </section>
+    <!--Section Services-->
+    <section id="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="separateur">
+                <div class="rond-bleu"></div>
+                <hr>
+            </div>
+            <p class="middle">
+                Plus qu’une agence web, la WebAgency c’est avant tout une équipe de concepteurs, qui réalisent des plateformes web alliant créativité et technologie.
+            </p>
+            <div class="contenu">
+                <div class="imac"><img src="images/main-feature.png" alt="Imac">
+                </div>
+                <div class="blocTexte">
+                    <!--On place les logos dans un cercle avec le point bleu-->
+                    <div class="logo">
+                        <div class="service">
+                            <div class="cercle">
+                                <i class="fas fa-chart-line fa-2x blue"></i>
+                                <i class="fas fa-circle droite blue"></i>
+                            </div>
+                        </div>
+                        <!--On place le texte à la suite-->
+                        <div class="description">
+                            <h3>UX design</h3>
+                            <p>Notre agence vous garantit un site web 100% intuitif et attrayant pour l'utilisateur. Optimisons ensemble l'intérêt de vos futurs clients afin de rendre leur expérience inoubliable !
+                            </p>
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <div class="service">
+                            <div class="cercle">
+                                <i class="fas fa-cubes fa-2x blue"></i>
+                                <i class="fas fa-circle droite blue"></i>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <h3>UI design</h3>
+                            <p>A l'heure actuelle, Internet ne se réduit plus à un simple écran d'ordinateur, Web Agency vous garantit donc un site 100% responsive sur smartphone et tablette !
+                            </p>
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <div class="service">
+                            <div class="cercle">
+                                <i class="fas fa-chart-pie fa-2x blue"></i>
+                                <i class="fas fa-circle droite blue"></i>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <h3>SEO</h3>
+                            <p>Forts de nos années d'expériences, nous vous garantissons un positionnement optimal sur les moteurs de recherche. Nous définissons les mots-clés de votre site et améliorons ainsi votre référencement.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section Projets-->
+    <section id="portfolio" class="container">
+
+        <h2>Nos projets</h2>
+        <div class="separateur">
+            <div class="rond-bleu"></div>
+            <hr>
+        </div>
+        <p class="middle">Ils nous ont fait confiance ! Partagez vous aussi vos créations sur votre site</p>
+        <!--Menu personalisé pour la section Projets-->
+        <div class="boutonGroupe">
+            <div class="boutonIndiv boutonAfter ">
+                <!--On place la fleche sur le premier élément (Menu Js interactif ?)-->
+                <div><a class="boutonProjets boutonActive arrow_box">All Works</a></div>
+            </div>
+            <div class="boutonIndiv">
+                <div><a class="boutonProjets">Creative</a></div>
+            </div>
+            <div class="boutonIndiv">
+                <div><a class="boutonProjets">Corporate</a></div>
+            </div>
+            <div class="boutonIndiv">
+                <div><a class="boutonProjets">Portfolio</a></div>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="pictureRow">
+                <!--On place les images avec flexbox-->
+                <div class="picture">
+                    <a href="#"><img src="images/portfolio/01.jpg" alt="Lunettes Vintage" /></a>
+                    <!--On rajoute la legende au hover avec l'icone Oeil-->
+                    <div class="legende">
+                        <i class="fas fa-eye iconeOeil"></i>
+                        <div class="texteLegende">
+                            <h5>Lunettes</h5>Lunettes Vintage
+                        </div>
+                    </div>
+                </div>
+                <div class="picture">
+                    <a href="#"><img src="images/portfolio/02.jpg" alt="Robot Lapin" /></a>
+                    <div class="legende">
+                        <i class="fas fa-eye iconeOeil"></i>
+                        <div class="texteLegende">
+                            <h5>Rabbit robot</h5>Robot Lapin
+                        </div>
+                    </div>
+                </div>
+                <div class="picture">
+                    <a href="#"><img src="images/portfolio/03.jpg" alt="Original Pompadour" /></a>
+                    <div class="legende">
+                        <i class="fas fa-eye iconeOeil"></i>
+                        <div class="texteLegende">
+                            <h5>Original Pompadour</h5>Logo
+                        </div>
+                    </div>
+                </div>
+                <div class="picture">
+                    <a href="#"><img src="images/portfolio/04.jpg" alt="Illustration" /></a>
+                    <div class="legende">
+                        <i class="fas fa-eye iconeOeil"></i>
+                        <div class="texteLegende">
+                            <h5>Cartes de visite</h5>Illustration
+                        </div>
+                    </div>
+                </div>
+                <div class="picture">
+                    <a href="#"><img src="images/portfolio/05.jpg" alt="Exemple de design" /></a>
+                    <div class="legende">
+                        <i class="fas fa-eye iconeOeil"></i>
+                        <div class="texteLegende">
+                            <h5>Packaging</h5>Exemple de design
+                        </div>
+                    </div>
+                </div>
+                <div class="picture">
+                    <a href="#"><img src="images/portfolio/06.jpg" alt="Design Art" /></a>
+                    <div class="legende">
+                        <i class="fas fa-eye iconeOeil"></i>
+                        <div class="texteLegende">
+                            <h5>Ville moderne</h5>Design Art
+                        </div>
+                    </div>
+                </div>
+                <div class="picture">
+                    <a href="#"><img src="images/portfolio/07.jpg" alt="Vers l'infini..." /></a>
+                    <div class="legende">
+                        <i class="fas fa-eye iconeOeil"></i>
+                        <div class="texteLegende">
+                            <h5>Fusée</h5>Vers l'infini...
+                        </div>
+                    </div>
+                </div>
+                <div class="picture">
+                    <a href="#"><img src="images/portfolio/08.jpg" alt="Kit de survie" /></a>
+                    <div class="legende">
+                        <i class="fas fa-eye iconeOeil"></i>
+                        <div class="texteLegende">
+                            <h5>EDC Urbain</h5>Kit de survie
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <!--On place la map Google Maps-->
+        <div class="google-maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2216096807215!2d2.3476369153733665!3d48.873051779288886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1526807299520" width="600" height="450" style="border:0" allowfullscreen></iframe>
+            <!--On lui rajoute un "film" bleu-->
+            <div class="masqueBleu" title="Plan d'accès fourni par GoogleMap"></div>
+            <!--On met en place le formulaire-->
+            <form id="formulaire" title="Formulaire de contact">
+                <h4 class="texteContact">Contact info</h4><br>
+                <p><b>WebAgency SAS</b><br />
+                25 rue d'Hauteville, 75010 PARIS<br />
+                Tél : 01 02 03 04 05<br /></p>
+                <p class="formInfo"><em>Tous les champs sont obligatoires</em><br></p>
+                <input type="text" name="name" id="name" placeholder="Nom" title="Votre nom" /><br /><br />
+                <input type="text" name="email" id="email" placeholder="E-mail" title="Votre e-mail" /><br /><br />
+                <input type="text" name="subject" id="sujet" placeholder="Sujet" title="Sujet du message" /><br /><br />
+                <textarea name="message" id="message" placeholder="Message" title="Corps du message"></textarea><br /><br />
+                <span><a href="#" class="button"><b>Envoyer</b></a></span>
+            </form>
+        </div>
+
+    </section>
+
+    <footer>
+    </footer>
+</body>
+
+</html>
