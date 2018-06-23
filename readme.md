@@ -3,7 +3,7 @@ Projet Validé le 25 Mai 2018
 
 Pensez a faire le slider en CSS
 https://www.youtube.com/watch?v=ZsuTciVL8PU
-Ca peut être utile
+Ca peut être utile, ou voir un auter tuto ou une autre manière de faire
 
 Reverifier le positionnement avec flexbox grid
 
