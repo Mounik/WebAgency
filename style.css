@@ -136,20 +136,20 @@ nav {
         width: 100%;
         height: 50px;
     }
-    
+
     .navigation {
         height: 50px;
     }
-    
+
     header img {
         padding: 5px;
         max-width: 200px;
     }
-    
+
     nav {
         max-width: 120px;
     }
-    
+
     .toggle {
         clear: both;
         display: block;
@@ -166,13 +166,13 @@ nav {
         -webkit-transition: all .1s linear;
         transition: all .1s linear;
     }
-    
+
     .toggle:hover {
         background: #cecece;
         position: relative;
         z-index: 5;
     }
-    
+
     #checkbox:checked + label .resp li {
         opacity: 1;
         visibility: visible;
@@ -184,17 +184,17 @@ nav {
     #checkbox:checked + label .resp {
         height: 200px;
     }
-    
+
     .navigation {
         -webkit-box-align: start;
         -ms-flex-align: start;
         align-items: flex-start;
     }
-    
+
     .navigation img {
         width: 60%;
     }
-    
+
     .menu {
         border-radius: 0px;
         border-top-left-radius: 5px;
@@ -215,7 +215,7 @@ nav {
         -webkit-transition: height .3s linear;
         transition: height .3s linear;
     }
-    
+
     .menu li {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -228,7 +228,7 @@ nav {
         background: white;
         height: 100%;
     }
-    
+
     .menu li a {
         width: 95%;
         font-size: 13px;
@@ -244,14 +244,70 @@ nav {
 
 /* -------------------- Slider ----------------- */
 
-.slider img {
-    width: 100%;
-    z-index: -1;
+@-webkit-keyframes slidy {
+    0% {
+        left: 0%;
+    }
+
+    25% {
+        left: 0%;
+    }
+
+    50% {
+        left: -100%;
+    }
+
+    75% {
+        left: -100%;
+    }
+
+    100% {
+        left: -200%;
+    }
 }
 
-.slider {
-    position: relative;
+@keyframes slidy {
+    0% {
+        left: 0%;
+    }
+
+    25% {
+        left: 0%;
+    }
+
+    50% {
+        left: -100%;
+    }
+
+    75% {
+        left: -100%;
+    }
+
+    100% {
+        left: -200%;
+    }
 }
+
+div#slider {
+    overflow: hidden;
+}
+
+div#slider figure img {
+    width: 20%;
+    float: left;
+}
+
+div#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    -webkit-animation: 5s slidy infinite;
+    animation: 5s slidy infinite;
+}
+
 
 #chevron {
     width: 100%;
@@ -338,21 +394,21 @@ nav {
     #accueil .container h1 {
         font-size: 1em;
     }
-    
+
     .slider img {
         height: 250px;
         -o-object-fit: cover;
         object-fit: cover;
     }
-    
+
     #accueil .container p {
         font-size: 0.9em;
     }
-    
+
     .button {
         font-size: 0.8em;
     }
-    
+
     .chev {
         display: none;
     }
@@ -407,6 +463,7 @@ hr {
         margin-top: 20px;
         font-weight: 900;
     }
+
     .middle {
         width: 95%;
         margin-top: 15px;
@@ -486,7 +543,7 @@ hr {
     .contenu img {
         min-width: 500px;
     }
-    
+
     .contenu {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -499,7 +556,7 @@ hr {
         -ms-flex-align: center;
         align-items: center;
     }
-    
+
     .blocTexte {
         width: 90%;
     }
@@ -512,11 +569,11 @@ hr {
         width: 50px;
         height: 50px;
     }
-    
+
     .droite {
         top: 15px;
     }
-    
+
     .contenu {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -526,17 +583,18 @@ hr {
         -ms-flex-direction: column;
         flex-direction: column;
     }
-    
-    .description p, .logo {
+
+    .description p,
+    .logo {
         text-align: justify;
         margin: 0 10px;
     }
-    
+
     h3 {
         font-weight: bold;
         margin-top: 15px;
     }
-    
+
     .fa-circle {
         font-size: 13px;
         right: -7px;
@@ -689,11 +747,11 @@ h5 {
     h5 {
         font-size: 14px;
     }
-    
+
     .iconeOeil {
         left: 75%;
     }
-    
+
     .picture {
         width: 30%;
     }
@@ -705,17 +763,17 @@ h5 {
     h5 {
         font-size: 12px;
     }
-    
+
     .picture {
         width: 95%;
         margin: auto;
     }
-    
+
     .picture img {
         width: 95%;
         margin: auto;
     }
-    
+
     .legende {
         margin: auto;
         width: 95%;
